@@ -4,34 +4,38 @@
     <title>Document</title>
     <style>
         body {
+            margin: 0;
+        }
+
+        .box {
             background-color: #FCE13D;
+            width: 800px;
+            height: 400px;
         }
 
-        #fondo {
-            background-image: url(logo.png);
-            background-repeat: no-repeat;
-            margin-left: 500;
-            background-size: 1000px 500px;
+        #logo {
+            margin-left: 255px;
         }
 
-        p.title {
-            text-decoration-style: none;
+        #title {
             text-decoration: none;
-
+            font-size: 50px;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         p {
             text-decoration: underline;
             text-align: center;
-            margin-top: 500px;
-
         }
     </style>
 </head>
 
 <body id="fondo">
-    <h1>LOREM<b>IPSUM</b></h1>
+    <div class="box">
+    <img src="logo.png" id="logo">
+    <p id="title">LOREM<b>IPSUM</b></p>
     <p>Restaurant</p>
+</div>
 </body>
 
 </html>
