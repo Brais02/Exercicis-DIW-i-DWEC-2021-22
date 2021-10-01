@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1</title>
+    <style>
+        p {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="numero1" type="number">
+    <input id="numero2" type="number">
+    <p onclick="Calculo()">=</p>
+    <section id="final"></section>
+    <script>
+        function Suma(numerouno, numerodos) {
+            /*Devuelve la suma de los dos numeros*/
+            return Number(numerouno + numerodos);
+        }
+
+        function Calculo() {
+            /*Creo las variables y les añado el valor del input*/
+            var numero1 = document.getElementById("numero1").value;
+            var numero2 = document.getElementById("numero2").value;
+            /*Llamo a la funcion Suma y le paso los parametros en forma de numero*/
+            var resultado = Suma(Number(numero1), Number(numero2));
+            document.getElementById("final").innerHTML = "<h1>" + resultado + "</h1>";
+        }
+    </script>
+</body>
+
+</html>
