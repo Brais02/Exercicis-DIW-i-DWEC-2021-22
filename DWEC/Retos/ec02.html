@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eco02</title>
+    <style>
+        output {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Introduce un dato en la caja:</p>
+    <input id="entrada" type="text">
+    <button onclick="reset()">RESET</button>
+    <br>
+    <br>
+    <button onclick="n1()">01. String Buit</button>
+    <button onclick="n2()">02. Invert String</button>
+    <button onclick="n3()">03. Quantes a</button>
+    <button onclick="n4()">04. Abans a</button>
+    <button onclick="n5()">05. Primera i darrera a</button>
+    <button onclick="n6()">06. Esborra substring</button>
+    <button onclick="n7()">07. Substitueix substring</button>
+    <button onclick="n8()">08. Cap i cua</button>
+    <button onclick="n9()">09. No espais</button>
+    <button onclick="n10()">10. frase amb guions</button>
+    <button onclick="n11()">11. Acronim </button>
+    <button onclick="n12()">12. Email</button>
+    <button onclick="n13()">13. Numero signe</button>
+    <button onclick="n14()">14. Es Número</button>
+    <button onclick="n15()">15. Numero part entera</button>
+    <button onclick="n16()">16. Numero part decimals</button>
+    <button onclick="n17()">17. xx_amb 3 decimals</button>
+
+
+    <br>
+    <p>Aqui sale la respuesta:</p>
+    <output id="salida"></output>
+</body>
+
+<script>
+    /*Completado*/
+    function n1() {
+        var texto = entrada();
+        if (texto <= 0 | texto >= 0) {
+            salida("No es un String");
+        } else {
+            salida("Es un String");
+        }
+    }
+
+    /*Completado*/
+    function n2() {
+        var texto = entrada();
+        var numero = 0;
+        var array = [];
+        var solucion = "";
+
+        while (numero != texto.length) {
+            array[numero] = texto.charAt(numero);
+            numero++;
+        }
+
+        if (numero == texto.length) {
+            numero--;
+            while (numero != -1) {
+                solucion += array[numero];
+                numero--;
+            }
+        }
+        salida(solucion);
+    }
+
+    function n3() {
+        nocompletado();
+    }
+
+    function n4() {
+        nocompletado();
+    }
+
+    function n5() {
+        nocompletado();
+    }
+
+    function n6() {
+        nocompletado();
+    }
+
+    function n7() {
+        nocompletado();
+    }
+
+    /*Completado*/
+    function n8() {
+        var texto = entrada();
+
+        var letra = texto.charAt(0);
+
+        salida(letra + texto + letra);
+    }
+
+    function n9() {
+        nocompletado();
+    }
+
+    function n10() {
+        nocompletado();
+    }
+
+    /*NO Completado*/
+    function n11() {
+        nocompletado();
+    }
+
+    function n12() {
+        nocompletado();
+    }
+
+    /*Completado*/
+    function n13() {
+        var numero = entrada();
+        if (numero >= 0) {
+            if (numero == 0) {
+                salida("El numero es 0");
+            } else {
+                salida("El numero es positivo");
+            }
+        } else {
+            salida("El numero es negativo");
+        }
+    }
+
+    /*Completado*/
+    function n14() {
+        var numero = entrada();
+        if (numero <= 0 | numero >= 0) {
+            salida("Es un numero");
+        } else {
+            salida("No es un numero");
+        }
+    }
+
+    /*Completado*/
+    function n15() {
+        var numero = entrada();
+        salida(parseInt(numero));
+    }
+
+    function n16() {
+        nocompletado();
+    }
+
+    function n17() {
+        nocompletado();
+    }
+
+    function entrada() {
+        return document.getElementById("entrada").value;
+    }
+
+    function salida(informacion) {
+        document.getElementById("salida").innerHTML = informacion;
+    }
+
+    function reset() {
+        document.getElementById("entrada").value = "";
+    }
+
+    function nocompletado() {
+        document.getElementById("salida").innerHTML = "Este ejercicio no ha sido completado, lo lamento";
+    }
+
+</script>
+
+</html>
